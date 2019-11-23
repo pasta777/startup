@@ -10,17 +10,34 @@ html, body {
 h1 {
     font-size: 3rem;
     color: whitesmoke;
-
+    transition:0.25s;
+    font-family: 'Indie Flower', cursive;
 }
 hr {
-    border-width: 3px;
+    border-width: 5px;
+    border-color:crimson;
+    width: 50px;
 }
 .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.btn {
+.btn-xl {
+    background-color: crimson;
+    border-color: crimson;
+    border-width: 0.75rem;
+    border-radius: 20px;
     text-transform: uppercase;
-    font-weight: 800;
+    font-weight: 450;
+    transition:0.25s;
+    font-family: 'Fredoka One', cursive;
+}
+.btn-xl:hover {
+    background-color:rgb(161, 22, 50);
+    border-color:rgb(161, 22, 50);
+    border-width: 0.85rem;
+}
+.buffer {
+    height:75%;
 }
