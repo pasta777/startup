@@ -1,0 +1,26 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    background: url(photo-1573743338941-39db12ef9b64.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+h1 {
+    font-size: 3rem;
+    color: whitesmoke;
+
+}
+hr {
+    border-width: 3px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.btn {
+    text-transform: uppercase;
+    font-weight: 800;
+}
