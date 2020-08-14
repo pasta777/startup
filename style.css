@@ -1,11 +1,13 @@
-html, body {
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+html,body {
     height: 100%;
     width: 100%;
-    background: url(photo-1573743338941-39db12ef9b64.jpg) no-repeat center center fixed; 
+    background: url(img/photo-1573743338941-39db12ef9b64.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    cursor: none;
 }
 h1 {
     font-size: 3rem;
@@ -32,12 +34,42 @@ hr {
     font-weight: 450;
     transition:0.25s;
     font-family: 'Fredoka One', cursive;
+    color: white;
 }
 .btn-xl:hover {
     background-color:rgb(161, 22, 50);
     border-color:rgb(161, 22, 50);
     border-width: 0.85rem;
+    color: white;
+}
+.btn-xl:focus {
+    box-shadow: none;
+}
+button:not(:disabled) {
+    cursor: none;
 }
 .buffer {
     height:75%;
+}
+.wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+#ball {
+    width: 60px;
+    height: 60px;
+    background: none;
+    border: 5px solid black;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    
 }
