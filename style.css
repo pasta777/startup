@@ -19,6 +19,11 @@ hr {
     border-width: 5px;
     border-color:crimson;
     width: 50px;
+    transition: .25s;
+}
+hr.over {
+    border-width: 10px;
+    border-color:rgb(161, 22, 50);
 }
 .container {
     display: flex;
@@ -71,5 +76,12 @@ button:not(:disabled) {
     top: 50%;
     transform: translate(-50%, -50%);
     pointer-events: none;
-    
+    transition: border-width .25s width .1s height .1s;
+}
+#ball.over {
+    border-width: 10px;
+}
+#ball.over-s {
+    width: 70px;
+    height: 70px;
 }

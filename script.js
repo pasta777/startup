@@ -6,8 +6,21 @@ $on('mousemove', function (e) {
     xmouse = e.clientX || e.pageX;
     ymouse = e.clientY || e.pageY;
 });
-
 var ball = $('#ball');
+$('button').addEventListener('mouseover', function() {
+    ball.classList.add('over');
+    $('hr').classList.add('over');
+});
+$('button').addEventListener('mouseout', function() {
+    ball.classList.remove('over');
+    $('hr').classList.remove('over');
+});
+$on('mousedown', function () {
+    ball.classList.add('over-s');
+});
+$on('mouseup', function () {
+    ball.classList.remove('over-s');
+});
 var x = void 0,
     y = void 0,
     dx = void 0,
@@ -77,3 +90,4 @@ setInterval(function() {
     }
     ball.style.borderColor = `rgb(${red}, ${green}, ${blue})`;
 }, 10);
+
