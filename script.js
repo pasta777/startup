@@ -1,27 +1,27 @@
-var $ = document.querySelector.bind(document);
-var $on = document.addEventListener.bind(document);
+const $ = document.querySelector.bind(document);
+const $on = document.addEventListener.bind(document);
 
-var xmouse, ymouse;
-$on('mousemove', function (e) {
+let xmouse, ymouse;
+$on('mousemove', (e) => {
     xmouse = e.clientX || e.pageX;
     ymouse = e.clientY || e.pageY;
 });
-var ball = $('#ball');
-$('button').addEventListener('mouseover', function() {
+const ball = $('#ball');
+$('button').addEventListener('mouseover', () => {
     ball.classList.add('over');
     $('hr').classList.add('over');
 });
-$('button').addEventListener('mouseout', function() {
+$('button').addEventListener('mouseout', () => {
     ball.classList.remove('over');
     $('hr').classList.remove('over');
 });
-$on('mousedown', function () {
+$on('mousedown', () => {
     ball.classList.add('over-s');
 });
-$on('mouseup', function () {
+$on('mouseup', () => {
     ball.classList.remove('over-s');
 });
-var x = void 0,
+let x = void 0,
     y = void 0,
     dx = void 0,
     dy = void 0,
@@ -29,7 +29,7 @@ var x = void 0,
     ty = 0,
     key = -1;
 
-var followMouse = function followMouse() {
+const followMouse = () => {
     key = requestAnimationFrame(followMouse);
 
     if (!x || !y) {
@@ -50,14 +50,14 @@ var followMouse = function followMouse() {
     ball.style.top = y + 'px';
 };
 
-var red = 0;
-var green = 127;
-var blue = 255;
-var hitTheLoopRed = false;
-var hitTheLoopGreen = false;
-var hitTheLoopBlue = false;
+let red = 0;
+let green = 127;
+let blue = 255;
+let hitTheLoopRed = false;
+let hitTheLoopGreen = false;
+let hitTheLoopBlue = false;
 
-setInterval(function() {
+setInterval(() => {
     // Red
     if(red < 255 && !hitTheLoopRed) {
         red++;
